@@ -409,6 +409,9 @@ padding:10px;
 }
 
 
+.profile .picture{float:none;}
+
+
 .developer{color:#707070; clear:both; display:block;}
 .developer a{color:#707070; font-weight:normal; background:transparent url("images/star.gif") no-repeat center left; padding-left:15px;}
 .developer strong a{text-decoration:none; background: none; padding-left:0;}

@@ -100,7 +100,7 @@
 <div class="column-1"><?php echo $left ?></div>
 <!-- / column-1 -->
 <?php endif; ?>
-
+<? if (!empty($right) && arg(0) == 'admin' && !(arg(1) == 'build' && arg(2) == 'block')) $right = NULL; ?>
 
 
 <!-- column-2 --><div class="column-2 
