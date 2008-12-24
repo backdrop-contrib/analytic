@@ -1,11 +1,12 @@
 name = Analytic
-description = Theme for communities, blogs and online media provided by <a href="http://RussianWebStudio.com">RussianWebStudio.com</a>
+description = Theme for communities, blogs and online media provided by <a href="http://RussianWebStudio.com">RussianWebStudio.com</a>. <br /><strong>Important Note:</strong> The right column is disabled by default in admin section, as sometimes the content of admin section is wider than central column, and the content is cut. You can turn on/off right(or left) column for admin section in theme configuration.
+
+
 
 core = 6.x
 engine = phptemplate
 
 
-regions[place_for_search] = place for search
 regions[left] = left sidebar
 regions[right] = right sidebar
 regions[top_content_block_right] = top content block right RED

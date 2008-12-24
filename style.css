@@ -119,7 +119,7 @@ table td{padding:2px 5px;}
 
 
 #logo-container{border-top:1px solid #000; padding-top:3px; margin-bottom:3px; }
-#money-bg{background:transparent url("images/bg_money.jpg") repeat right top;}
+#money-bg{background:transparent url("images/header-image.jpg") repeat right top;}
 #logo{background-color:#c82128; float:left; padding:10px 50px;  color:#fff; border-right:3px solid #fff;}
 #logo h1{font-size:38px; padding:0; margin:0; line-height:100%;}
 #logo strong{font-weight:normal; color:#ffa0a0; font-size:0.8em;}
@@ -149,12 +149,12 @@ font-size:1.2em;
 .rws-primary-menu li a.active {color:#fff; background-color:#4a4a4a;}
 
 /******************** SEARCH *****************************************/
-.rws-primary-menu #search-block-form {float:right; padding:4px;  border:none;}
-.rws-primary-menu #search-block-form label{display:none;}
+.rws-primary-menu #search-theme-form {float:right; padding:4px;  border:none;}
+.rws-primary-menu #search-theme-form label{display:none;}
 .rws-primary-menu .form-submit{background-color:#eaeaea; border:1px solid #b8b8b8; margin:0; float:left; height:21px;  padding:1px 10px; font-family: Georgia;
 }
 
-.rws-primary-menu #search-block-form div{display:inline;}
+.rws-primary-menu #search-theme-form div{display:inline;}
 .rws-primary-menu .form-text{font-family: Georgia; background-color:#fff; border:1px solid #b8b8b8; margin:0;  float:left; height:17px; padding:1px 4px; font-family: Georgia; width:200px; 
 }
 
@@ -336,7 +336,6 @@ padding-top:10px;
 text-align:left;
 clear:both;
 background:transparent url("images/bg_node.gif") repeat-x top left;
-margin-left: 171px; 
 font-size:0.84em;
 padding:15px 16px;
 color:#707070;
@@ -409,7 +408,22 @@ padding:10px;
 }
 
 
+blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; font-style:italic; clear:both; padding:1em 1em 0.5em 1em; margin:0.2em 0; display:block;}
+
+
 .profile .picture{float:none;}
+
+
+.signature p {
+  border-top: 1px solid #d6ddb9;
+  font-size: 0.9em;
+  margin: 10px 0;
+  padding: 0;
+}
+
+
+.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; } 
+
 
 
 .developer{color:#707070; clear:both; display:block;}
@@ -631,9 +645,5 @@ ul.primary li a,
     _width: 100%; /* Otherwise IE5 treats the ul as floated */
     _w\idth: auto; /* Reset to auto width for IE6 */
   }
-
-
-
-
 
 

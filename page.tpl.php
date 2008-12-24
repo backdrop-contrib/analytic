@@ -27,14 +27,20 @@
     <ul class="top-links-ul">
     <? if(!$user->uid): ?>	
     	<li><?php echo l(t("Log in"), "user");?></li>
-    	<li><?php echo l(t("Register now"), "user/register");?></li>
+      <? if($registration_enabled): ?>    	
+    	<li><?php echo l(t("Create new account"), "user/register");?></li>
+    	<? endif; ?>
     <? else: ?> 
-       <li><?php echo t("You are logged in as <strong>!user</strong>", array('!user' => l($user->name, "user"))); ?></li>
-    	<li><?php echo l(t("Edit profile"), "user/" . $user->uid . "/edit");?></li>
-    	<li><? echo l(t("Log out"), "logout"); ?></li>
+       <li><?php echo t("You are logged in as <strong>!user</strong>", array('!user' => l($user->name, "user"))); ?>&nbsp;|&nbsp;<?php echo l(t("Edit"), "user/" . $user->uid . "/edit");?></li>
+      	<li><? echo l(t("Log out"), "logout"); ?></li>
     <? endif; ?>
-    <li><a href="<?php echo url("rss.xml"); ?>"><img src="<?php echo base_path() . path_to_theme() ?>/images/rss.gif"  alt="RSS" /></a></li>
-    </ul>
+    
+	<? if($feed_icons): ?>
+	<li><a href="<?php echo url("rss.xml"); ?>"><img src="<?php echo base_path() . path_to_theme() ?>/images/rss.gif"  alt="RSS" /></a></li>
+	<? endif; ?>
+   
+	
+	</ul>
   </div>
   
   <!-- <<<<<<<< REMOVE THIS IF YOU WANT TO GET RID OF TOP LINKS (RSS, LOGIN, REGISTER) end -->
@@ -62,7 +68,11 @@
 
 <!-- primary menu -->
 <div class="rws-primary-menu clear-block">
-  <?php if ($place_for_search): ?><?php echo $place_for_search ?><?php endif; ?>
+  <?php if ($search_box): ?>
+  <div id="search-box">
+    <?php print $search_box; ?>
+  </div><!-- /search-box -->
+  <?php endif; ?>
   
   
   
@@ -73,23 +83,24 @@
   
   <!-- admin edit   -->
   <? if($user->uid == 1): ?>
-    <?php echo l(t("Edit this menu"), "admin/build/menu-customize/primary-links", array("attributes" => array("class" => "edit-this-link"))); ?>
+    <?php echo l(t("Edit menu"), "admin/build/menu-customize/primary-links", array("attributes" => array("class" => "edit-this-link"))); ?>
   <? endif; ?>
   <!-- admin edit   -->
   
   
   
-  <!-- admin panel   -->
+    <!-- admin panel   -->
    <? if($user->uid == 1): ?>
     <ul id="rws-uni-tabs" class="clear-block">
-      <li><?php echo l("Admin panel", "admin"); ?></li>
-      <li><?php echo l("Blocks", "admin/build/block"); ?></li>
-      <li><?php echo l("Menus", "admin/build/menu"); ?></li>
-      <li><?php echo l("Modules", "admin/build/modules"); ?></li>
-      <li><?php echo l("Translation", "admin/build/translate/search"); ?></li>
+      <li><?php echo l(t("Administer"), "admin"); ?></li>
+      <li><?php echo l(t("Blocks"), "admin/build/block"); ?></li>
+      <li><?php echo l(t("Menus"), "admin/build/menu"); ?></li>
+      <li><?php echo l(t("Modules"), "admin/build/modules"); ?></li>
+      <li><?php echo l(t("Translation"), "admin/build/translate/search"); ?></li>
     </ul>
   <? endif; ?>
   <!-- / admin panel -->
+
 
 </div>
 <!--  /primary menu -->
@@ -100,7 +111,9 @@
 <div class="column-1"><?php echo $left ?></div>
 <!-- / column-1 -->
 <?php endif; ?>
-<? if (!empty($right) && arg(0) == 'admin' && !(arg(1) == 'build' && arg(2) == 'block')) $right = NULL; ?>
+
+
+
 
 
 <!-- column-2 --><div class="column-2 
@@ -115,7 +128,7 @@ no-right-column
         
 
 
-<!-- PRINTING BLOCK BLOCKS THE CONTENT -->
+<!-- PRINTING BLOCKS BEFORE THE CONTENT (with RED headers) -->
 <?php if ($top_content_block_left || $top_content_block_right): ?>
   <!-- column-2-blocks -->
   <div id="block-top" class="column-2-blocks clear-block 
@@ -135,7 +148,7 @@ no-right-column
   <!-- /column-2-blocks-right --></div>
   <!-- /column-2-blocks --></div>
 <?php endif; ?>
-<!-- END PRINTING BLOCK BLOCKS THE CONTENT -->
+<!-- PRINTING BLOCKS BEFORE THE CONTENT (with RED headers) -->
 
 <?php if ($content_top): ?><div id="content-top"><?php echo $content_top ?></div><?php endif; ?>
 
@@ -153,7 +166,6 @@ no-right-column
 		<?php if ($tabs): ?><div class="tabs"><?php echo $tabs; ?></div><?php endif; ?>
 		<!-- main-content-block --><div class="main-content-block"> 
 		<?php echo $content; ?>
-		<?php echo $feed_icons; ?>
 		<!-- /main-content-block --></div>
 		
 <?php if ($content_bottom): ?><?php echo $content_bottom ?><?php endif; ?>
@@ -189,7 +201,7 @@ no-right-column
 <?php endif; ?>
 
 
-<div class="content_after_blocks"><?php if ($content_after_blocks): ?><?php echo $content_after_blocks ?><?php endif; ?></div>
+<?php if ($content_after_blocks): ?><div class="content_after_blocks"><?php if ($content_after_blocks): ?><?php echo $content_after_blocks ?><?php endif; ?></div><?php endif; ?>
 
 
 

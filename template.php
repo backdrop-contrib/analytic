@@ -2,6 +2,14 @@
 // $Id$
 
 function phptemplate_preprocess_page(&$vars) {
+  if (arg(0) == 'admin' && (theme_get_setting('admin_right_column') == 0)) {
+    $vars['right'] = '';
+  }
+  if (arg(0) == 'admin' && (theme_get_setting('admin_left_column') == 0)) {
+    $vars['left'] = '';
+  }
+  
+  $vars['registration_enabled'] = variable_get('user_register', 1);
   $vars['closure'] .= '<span class="developer">
 <strong><a href="http://russianwebstudio.com" title="Go to RussianWebStudio.com">Drupal theme</a></strong> by        <a href="http://russianwebstudio.com" title="Go to RussianWebStudio.com">RussianWebStudio.com</a>
 </span>';
