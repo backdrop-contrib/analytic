@@ -71,10 +71,6 @@ margin:0.2em 0 0.2em 0;
 
 h2 a{color:#8d6e00;}
 
-.sticky h2, .sticky h2 a{color:#343434; font-weight:bold;}
-
-
-
 .block h2, .block  h2.title{
 font-size:1.5em;
 padding:5px 10px;
@@ -82,6 +78,11 @@ color:#fff;
 background-color:#747474;
 margin: 0 0 0.5em 0;
 }
+
+.sticky h2, .sticky h2 a{color:#343434 !important; font-weight:bold;}
+
+
+
 
 /* .column-1 .block h2, .column-1 .block h2.title{background-color:#b6b5b5; } */
 
@@ -106,6 +107,7 @@ font-weight:normal;
 table {width:100%;}
 table td{padding:2px 5px;}
 
+.content li{margin-bottom:0.6em;}
 
 /*////////////////////////////CUSTOM BODY STYLES/////////////////////////////////*/
 
@@ -121,8 +123,8 @@ table td{padding:2px 5px;}
 #logo-container{border-top:1px solid #000; padding-top:3px; margin-bottom:3px; }
 #money-bg{background:transparent url("images/header-image.jpg") repeat right top;}
 #logo{background-color:#c82128; float:left; padding:10px 50px;  color:#fff; border-right:3px solid #fff;}
-#logo h1{font-size:38px; padding:0; margin:0; line-height:100%;}
-#logo strong{font-weight:normal; color:#ffa0a0; font-size:0.8em;}
+#logo h1{font-size:38px; padding:0 0 2px 0; margin:0; line-height:100%;}
+#logo strong{font-weight:normal; color:#ffa0a0; font-size:0.8em; line-height:normal;}
 #logo a{color:#fff; text-decoration:none;}
 #logo a:hover{color:#ffbdc0; }
 
@@ -144,18 +146,18 @@ float:left;
 font-size:1.2em;
 }
 
-.rws-primary-menu li a{display:block; padding:0.35em 1.5em 0.5em 1.5em;  color:#fff !important; }
+.rws-primary-menu li a{display:block; padding:0.35em 1.3em 0.5em 1.3em;  color:#fff !important; }
 .rws-primary-menu li a:hover{background-color:#4a4a4a; color:#f5f5f1; }
 .rws-primary-menu li a.active {color:#fff; background-color:#4a4a4a;}
 
 /******************** SEARCH *****************************************/
 .rws-primary-menu #search-theme-form {float:right; padding:4px;  border:none;}
 .rws-primary-menu #search-theme-form label{display:none;}
-.rws-primary-menu .form-submit{background-color:#eaeaea; border:1px solid #b8b8b8; margin:0; float:left; height:21px;  padding:1px 10px; font-family: Georgia;
+.rws-primary-menu .form-submit{background-color:#eaeaea; border:1px solid #b8b8b8; margin:0; float:left; height:21px;  padding:1px 8px; font-family: Georgia;
 }
 
 .rws-primary-menu #search-theme-form div{display:inline;}
-.rws-primary-menu .form-text{font-family: Georgia; background-color:#fff; border:1px solid #b8b8b8; margin:0;  float:left; height:17px; padding:1px 4px; font-family: Georgia; width:200px; 
+.rws-primary-menu .form-text{font-family: Georgia; background-color:#fff; border:1px solid #b8b8b8; margin:0;  float:left; height:17px; padding:1px 4px; font-family: Georgia; width:130px; 
 }
 
 
@@ -171,6 +173,7 @@ border-right:1px solid #c9c9c6;
 text-align:left;
 overflow:hidden;
 margin-bottom:30px;
+background-color:#f5f5f1;
 }
 
 .column-2{
@@ -183,6 +186,7 @@ margin-left:-1px;
 text-align:left;
 overflow:hidden;
 margin-bottom:30px;
+background-color:#f5f5f1;
 }
 
 .no-left-column{width:695px; margin-left:0;}
@@ -200,6 +204,7 @@ margin-left:-1px;
 text-align:left;
 overflow:hidden;
 margin-bottom:30px;
+background-color:#f5f5f1;
 }
 
 
@@ -265,6 +270,8 @@ background:transparent url("images/bg_node.gif") repeat-x bottom left;
 .content{line-height:145%;}
 
 .submitted, .submitted a{color:#9fa35c;}
+.sticky .submitted, .sticky  .submitted a{color:#83837d;}
+
 
 
 .block{margin-bottom:30px;}
@@ -422,12 +429,12 @@ blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; fo
 }
 
 
-.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; } 
+.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em;  border:1px dashed #fff;} 
 
 
 
-.developer{color:#707070; clear:both; display:block;}
-.developer a{color:#707070; font-weight:normal; background:transparent url("images/star.gif") no-repeat center left; padding-left:15px;}
+.developer{color:#707070; color:#9a9a9a; clear:both; display:block; margin-top:4px;}
+.developer a{color:#707070; color:#9a9a9a;  font-weight:normal; background:transparent url("images/star.gif") no-repeat center left; padding-left:15px;}
 .developer strong a{text-decoration:none; background: none; padding-left:0;}
 
 
