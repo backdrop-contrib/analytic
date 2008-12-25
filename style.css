@@ -325,6 +325,8 @@ padding-top:10px;
 .content_after_blocks{clear:both; padding-top:10px; border-top:1px solid #c9c9c6; }
 
 .main-content-block{padding-bottom:25px;}
+.main-content-block .block{margin:18px 0 2px 0;}
+
 
 #block-top{margin-top:0; border-bottom:1px solid #c9c9c6; margin-bottom:10px;}
 #block-top .column-2-blocks-left, #block-top .column-2-blocks-right{border-top:none; padding-top:0;}
