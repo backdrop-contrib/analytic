@@ -2,10 +2,22 @@
 // $Id$
 
 function phptemplate_preprocess_page(&$vars) {
-  if (arg(0) == 'admin' && (theme_get_setting('admin_right_column') == 0)) {
+  $defaults = array(
+    'admin_left_column' => 1,
+    'admin_right_column' => 0
+  );
+  
+  global $theme_key;
+  // Get default theme settings.
+  $settings = theme_get_settings($theme_key);    
+  $settings = array_merge($defaults, $settings);
+ 
+  
+  
+  if (arg(0) == 'admin' && ($settings['admin_right_column'] == 0)) {
     $vars['right'] = '';
   }
-  if (arg(0) == 'admin' && (theme_get_setting('admin_left_column') == 0)) {
+  if (arg(0) == 'admin' && ($settings['admin_left_column'] == 0)) {
     $vars['left'] = '';
   }
   

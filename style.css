@@ -275,7 +275,7 @@ background:transparent url("images/bg_node.gif") repeat-x bottom left;
 
 
 .block{margin-bottom:30px;}
-.block .content{padding: 0 8px;}
+.block .content{padding: 0 8px 4px 8px;}
 
 
 

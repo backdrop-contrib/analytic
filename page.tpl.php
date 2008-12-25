@@ -125,6 +125,10 @@ no-right-column
 <? endif; ?>
 ">
 
+
+		<?php if ($show_messages): ?>
+		<?php echo $messages; ?>
+		<? endif; ?>
         
 
 
@@ -155,9 +159,7 @@ no-right-column
 
 
 		<?php echo $breadcrumb ?>
-		<?php if ($show_messages): ?>
-      <?php echo $messages; ?>
-    <? endif; ?>
+		
 		<?php echo $help ?>
 
 
