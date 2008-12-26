@@ -14,10 +14,11 @@ function phptemplate_preprocess_page(&$vars) {
  
   
   
-  if (arg(0) == 'admin' && ($settings['admin_right_column'] == 0)) {
+  if (arg(0) == 'admin' && ($settings['admin_right_column'] == 0) && !(arg(1) == 'build' && arg(2) == 'block')) {
     $vars['right'] = '';
   }
-  if (arg(0) == 'admin' && ($settings['admin_left_column'] == 0)) {
+  
+  if (arg(0) == 'admin' && ($settings['admin_left_column'] == 0) && !(arg(1) == 'build' && arg(2) == 'block')) {
     $vars['left'] = '';
   }
   
