@@ -79,6 +79,9 @@ background-color:#747474;
 margin: 0 0 0.5em 0;
 }
 
+.block h2 a, .block h2.title a{color:#fff;}
+.block h2 a:hover, .block h2.title a:hover{color:#bbbbbb;}
+
 .sticky h2, .sticky h2 a{color:#343434 !important; font-weight:bold;}
 
 
@@ -431,7 +434,7 @@ blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; fo
 }
 
 
-.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em;  border:1px dashed #fff;} 
+.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em;  border:1px dashed #fff; margin-top:10px;} 
 
 
 
