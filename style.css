@@ -267,7 +267,7 @@ background:transparent url("images/bg_node.gif") repeat-x bottom left;
 
 .links{text-align:right; font-size:0.9em;}
 
-.content{line-height:145%;}
+.content p{line-height:145%;}
 
 .submitted, .submitted a{color:#9fa35c;}
 .sticky .submitted, .sticky  .submitted a{color:#83837d;}
