@@ -25,19 +25,19 @@
   
   <div id="top-links">
     <ul class="top-links-ul">
-    <? if (!$user->uid): ?>	
+    <?php if (!$user->uid): ?>	
     	<li><?php echo l(t("Log in"), "user");?></li>
-      <? if ($registration_enabled): ?>    	
+      <?php if ($registration_enabled): ?>    	
     	<li><?php echo l(t("Create new account"), "user/register");?></li>
-    	<? endif; ?>
-    <? else: ?> 
+    	<?php endif; ?>
+    <?php else: ?> 
        <li><?php echo t("You are logged in as <strong>!user</strong>", array('!user' => l($user->name, "user"))); ?>&nbsp;|&nbsp;<?php echo l(t("Edit"), "user/" . $user->uid . "/edit");?></li>
-      	<li><? echo l(t("Log out"), "logout"); ?></li>
-    <? endif; ?>
+      	<li><?php echo l(t("Log out"), "logout"); ?></li>
+    <?php endif; ?>
     
-	<? if ($feed_icons): ?>
+	<?php if ($feed_icons): ?>
 	<li><a href="<?php echo url("rss.xml"); ?>"><img src="<?php echo base_path() . path_to_theme() ?>/images/rss.gif"  alt="RSS" /></a></li>
-	<? endif; ?>
+	<?php endif; ?>
    
 	
 	</ul>
@@ -82,15 +82,15 @@
   
   
   <!-- admin edit   -->
-  <? if ($is_admin): ?>
+  <?php if ($is_admin): ?>
     <?php echo l(t("Edit menu"), "admin/build/menu-customize/primary-links", array("attributes" => array("class" => "edit-this-link"))); ?>
-  <? endif; ?>
+  <?php endif; ?>
   <!-- admin edit   -->
   
   
   
     <!-- admin panel   -->
-   <? if ($is_admin): ?>
+   <?php if ($is_admin): ?>
     <ul id="rws-uni-tabs" class="clear-block">
       <li><?php echo l(t("Administer"), "admin"); ?></li>
       <li><?php echo l(t("Blocks"), "admin/build/block"); ?></li>
@@ -98,7 +98,7 @@
       <li><?php echo l(t("Modules"), "admin/build/modules"); ?></li>
       <li><?php echo l(t("Translation"), "admin/build/translate/search"); ?></li>
     </ul>
-  <? endif; ?>
+  <?php endif; ?>
   <!-- / admin panel -->
 
 
@@ -118,17 +118,17 @@
 
 <!-- column-2 --><div class="column-2 
 <?php if (!$right && !$left): ?>no-right-and-left-columns
-<? elseif (!$left): ?>
+<?php elseif (!$left): ?>
 no-left-column
-<? elseif (!$right): ?>
+<?php elseif (!$right): ?>
 no-right-column
-<? endif; ?>
+<?php endif; ?>
 ">
 
 
 		<?php if ($show_messages): ?>
 		<?php echo $messages; ?>
-		<? endif; ?>
+		<?php endif; ?>
         
 
 
@@ -137,11 +137,11 @@ no-right-column
   <!-- column-2-blocks -->
   <div id="block-top" class="column-2-blocks clear-block 
   <?php if (!$right&&!$left): ?>column-2-blocks-no-right-and-left-columns
-  <? elseif (!$left): ?>
+  <?php elseif (!$left): ?>
   column-2-blocks-no-left-column
-  <? elseif (!$right): ?>
+  <?php elseif (!$right): ?>
   column-2-blocks-no-right-column
-  <? endif; ?>
+  <?php endif; ?>
   ">
   <!-- /column-2-blocks-left --><div class="column-2-blocks-left">
   <?php if ($top_content_block_left): ?><?php echo $top_content_block_left ?><?php endif; ?>
@@ -182,11 +182,11 @@ no-right-column
   <!-- column-2-blocks -->
   <div class="column-2-blocks clear-block 
   <?php if (!$right && !$left): ?>column-2-blocks-no-right-and-left-columns
-  <? elseif (!$left): ?>
+  <?php elseif (!$left): ?>
   column-2-blocks-no-left-column
-  <? elseif (!$right): ?>
+  <?php elseif (!$right): ?>
   column-2-blocks-no-right-column
-  <? endif; ?>
+  <?php endif; ?>
   ">
   <!-- /column-2-blocks-left --><div class="column-2-blocks-left">
   <?php if ($content_block_left): ?><?php echo $content_block_left ?><?php endif; ?>
