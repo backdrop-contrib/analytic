@@ -1,4 +1,4 @@
-html, body	{
+.html-main, .body-main	{
 background-color:#ababab; 
 	padding: 0;
 	margin: 0 auto;
@@ -9,7 +9,7 @@ background-color:#ababab;
 }
 
 
-body 
+.body-main
 {	
 
 display:block;
@@ -495,6 +495,16 @@ margin-top:25px;
 
 
 
+
+/***** FIX OPEN ID **************************/
+#user-login-form li.openid-link, #user-login li.openid-link{margin-left:0; padding-left:1.5em;
+background-position:top left;
+}
+
+#user-login-form #edit-submit{margin-bottom:10px;}
+
+
+/*********** FIX TINYMCE ********************/
 
 
 
