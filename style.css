@@ -1,4 +1,4 @@
-.html-main, .body-main	{
+#html-main, .body-main	{
 background-color:#ababab; 
 	padding: 0;
 	margin: 0 auto;
@@ -25,14 +25,6 @@ margin: auto;
 height: auto;
 width:1000px;
 background-color:#f5f5f1;
-}
-
-.clear
-{
-	clear: both;
-	font-size: 0px;
-	line-height: 0px;
-	visibility: collapse;
 }
 
 a{color:#8d6e00;}
@@ -124,9 +116,17 @@ table td{padding:2px 5px;}
 
 #logo-container{border-top:1px solid #000; padding-top:3px; margin-bottom:3px; }
 #money-bg{background:transparent url("images/header-image.jpg") repeat right top;}
-#logo{background-color:#c82128; float:left; padding:10px 50px;  color:#fff; border-right:3px solid #fff;}
+
+#logo-picture img{display:block;}
+#logo-picture{float:left; padding-right:15px; }
+#logo{background-color:#c82128; float:left; padding:8px 50px;  color:#fff; border-right:3px solid #fff;}
 #logo h1{font-size:38px; padding:0 0 2px 0; margin:0; line-height:100%;}
-#logo strong{font-weight:normal; color:#ffa0a0; font-size:0.8em; line-height:normal;}
+#logo h1.logo-picture-true{text-align:left;  display:inline; height:100%;}
+#logo strong.logo-picture-true{text-align:left; }
+#logo h1.logo-picture-true-slogan-false{line-height:150%; display:inline;}
+
+
+#logo strong{font-weight:normal; color:#ffa0a0; font-size:0.8em; line-height:normal; display:block;}
 #logo a{color:#fff; text-decoration:none;}
 #logo a:hover{color:#ffbdc0; }
 
@@ -433,7 +433,7 @@ blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; fo
 }
 
 
-.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em;  border:1px dashed #fff; margin-top:10px;} 
+.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; border:1px dashed #fff; margin-top:5px;} 
 
 
 
@@ -441,7 +441,7 @@ blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; fo
 .developer a{color:#707070; color:#9a9a9a;  font-weight:normal; background:transparent url("images/star.gif") no-repeat center left; padding-left:15px;}
 .developer strong a{text-decoration:none; background: none; padding-left:0;}
 
-
+.version{color:#f5f5f1; padding-left:20px;}
 
 
 

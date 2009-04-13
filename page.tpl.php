@@ -1,7 +1,7 @@
 <?php
 // $Id$
 ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $language->language ?>" xml:lang="<?php echo $language->language ?>" dir="<?php echo $language->dir ?>" class="html-main">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php echo $language->language ?>" xml:lang="<?php echo $language->language ?>" dir="<?php echo $language->dir ?>" id="html-main">
 
 <head>
   <title><?php echo $head_title ?></title>
@@ -47,19 +47,28 @@
 
 </div>
 
-
 <!-- logo-container -->
 <div id="logo-container">
   <div id="money-bg" class="clear-block">
-  <div id="logo">
+  <div id="logo<?php if ($logo && !$site_name && !$site_slogan): ?>-no-padding<?php endif; ?>">
   
-  <?php if ($site_name): ?>
-    <h1><a href="<?php echo $front_page; ?>" title="<?php echo t('Home') ?>"><?php echo $site_name ?></a></h1>
+			<?php if ($logo): ?> 
+            <div id="logo-picture">
+            <a href="<?php print $base_path ?>" title="<?php print t('Home') ?>"><img src="<?php print $logo ?>" alt="<?php print t('Home') ?>" /></a>
+            </div>
+            <?php endif; ?>
+
+
+ <?php if ($site_name): ?>
+ <!-- if logo picture is defined, text is aligned to left -->
+ 
+    <h1 <?php if ($logo && !$site_slogan): ?>class="logo-picture-true-slogan-false"<?php endif; ?>  <?php if ($logo): ?>class="logo-picture-true"<?php endif; ?>><a href="<?php echo $front_page; ?>" title="<?php echo t('Home') ?>"><?php echo $site_name ?></a></h1>
   <?php endif; ?>
   
-  <?php if ($site_slogan): ?>
-    <strong><?php echo $site_slogan; ?></strong>
-  <?php endif; ?>
+ <?php if ($site_slogan): ?>
+ <!-- if logo defined, text is aligned to left -->
+    <strong <?php if ($logo): ?>class="logo-picture-true"<?php endif; ?>><?php echo $site_slogan; ?></strong>
+  <?php endif; ?> 
   </div>
   </div>
 </div>
@@ -145,7 +154,7 @@ no-right-column
   ">
   <!-- /column-2-blocks-left --><div class="column-2-blocks-left">
   <?php if ($top_content_block_left): ?><?php echo $top_content_block_left ?><?php endif; ?>
-  <?php if (!$top_content_block_left): ?>&nbsp<?php endif; ?>
+  <?php if (!$top_content_block_left): ?>&nbsp;<?php endif; ?>
   <!-- /column-2-blocks-left --></div>
   <!-- /column-2-blocks-right --><div class="column-2-blocks-right">
   <?php if ($top_content_block_right): ?><?php echo $top_content_block_right ?><?php endif; ?>
@@ -190,7 +199,7 @@ no-right-column
   ">
   <!-- /column-2-blocks-left --><div class="column-2-blocks-left">
   <?php if ($content_block_left): ?><?php echo $content_block_left ?><?php endif; ?>
-  <?php if (!$content_block_left): ?>&nbsp<?php endif; ?>
+  <?php if (!$content_block_left): ?>&nbsp;<?php endif; ?>
   <!-- /column-2-blocks-left --></div>
   
   

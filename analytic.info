@@ -19,6 +19,7 @@ regions[content_block_right] = content bottom block right
 regions[content_after_blocks] = content after bottom blocks
 regions[footer] = footer
 features[] = name
+features[] = logo
 features[] = slogan
 features[] = mission
 features[] = node_user_picture

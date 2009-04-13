@@ -24,7 +24,7 @@ function phptemplate_preprocess_page(&$vars) {
   
   $vars['registration_enabled'] = variable_get('user_register', 1);
   $vars['closure'] .= '<span class="developer">
-<strong><a href="http://russianwebstudio.com" title="Go to RussianWebStudio.com">Drupal theme</a></strong> by        <a href="http://russianwebstudio.com" title="Go to RussianWebStudio.com">RussianWebStudio.com</a>
+<strong><a href="http://russianwebstudio.com" title="Go to RussianWebStudio.com">Drupal theme</a></strong> by        <a href="http://russianwebstudio.com" title="Go to RussianWebStudio.com">RussianWebStudio.com</a> <span class="version">ver.1.3</span>
 </span>';
 }
 
