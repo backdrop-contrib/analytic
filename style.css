@@ -667,4 +667,8 @@ ul.primary li a,
     _w\idth: auto; /* Reset to auto width for IE6 */
   }
 
+#comments .indented .indented .indented .indented .indented
+.indented .indented .indented .indented .indented{
+    margin: 0;
+}
 
