@@ -9,7 +9,7 @@
 * @return
 *   array A form array.
 */
-function phptemplate_settings($saved_settings) {
+function analitic_settings($saved_settings) {
   $defaults = array(
     'admin_left_column' => 1,
     'admin_right_column' => 0
