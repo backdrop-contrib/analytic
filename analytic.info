@@ -1,5 +1,5 @@
 name = Analytic
-description = Theme for communities, blogs and online media provided by <a href="http://RussianWebStudio.com">RussianWebStudio.com</a>. <br /><strong>Important Note:</strong> The right column is disabled by default in admin section, as sometimes the content of admin section is wider than central column, and the content is cut. You can turn on/off right(or left) column for admin section in theme configuration.
+description = Theme for communities, blogs and online media provided by <a href="http://pixeljets.com">pixeljets.com</a>. <br /><strong>Important Note:</strong> The right column is disabled by default in admin section, as sometimes the content of admin section is wider than central column, and the content is cut. You can turn on/off right(or left) column for admin section in theme configuration.
 
 
 
@@ -34,4 +34,11 @@ features[] = favicon
 features[] = primary_links
 settings[] = columns
 
+
+
+; Information added by drupal.org packaging script on 2010-07-11
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "analytic"
+datestamp = "1278833398"
 
