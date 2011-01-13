@@ -65,24 +65,9 @@
 <!-- primary menu -->
 
 <div class="rws-primary-menu clearfix">
-  <?/*php if ($search_box): ?>
-  <div id="search-box">
-    <?php print render($search_box); ?>
-  </div><!-- /search-box -->
-  <?php endif; */?>
   
   <?php echo render($page['primary_menu']); ?>
-   
-<?php if ($page['primary_menu']) : ?>
- 
-  <!-- admin edit   -->
-  <?/*php if ($is_admin): ?>
-    <?php echo l(t("Edit menu"), "admin/structure/menu/manage/main-menu/edit", array("attributes" => array("class" => "edit-this-link"))); ?>
-  <?php endif; */?>
-  <!-- admin edit   -->
-  <?php endif; ?>
-  
-  
+
     <!-- admin panel   -->
    <?php if ($is_admin): ?>
     <ul id="rws-uni-tabs" class="clearfix">
