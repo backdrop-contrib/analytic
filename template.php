@@ -22,24 +22,6 @@ function analytic_menu_local_task($variables) {
 }
 
 
-
-function analytic_menu_local_tasks() {
-  $output = array();
-
-  if ($primary = menu_primary_local_tasks()) {
-    $primary['#prefix'] = '<ul class="tabs primary clearfix">';
-    $primary['#suffix'] = '</ul>';
-    $output[] = $primary;
-  }
-  if ($secondary = menu_secondary_local_tasks()) {
-    $secondary['#prefix'] = '<ul class="tabs secondary clearfix">';
-    $secondary['#suffix'] = '</ul>';
-    $output[] = $secondary;
-  }
-
-  return $output;
-}
-
 function analytic_process_html(&$vars) {  
   if (empty($vars['page_bottom'])) {
     $vars['page_bottom'] = '';
