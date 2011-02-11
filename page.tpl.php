@@ -66,9 +66,23 @@
 
 <div class="rws-primary-menu clearfix">
   
-  <?php echo render($page['primary_menu']); ?>
+<?php if ($page['searchbox_region']): ?><div class="searchbox-region"><?php echo render($page['searchbox_region']); ?></div><?php endif; ?>
 
-    <!-- admin panel   -->
+
+<!-- render div that will make primary menu smaller because of search -->
+<?php if ($page['searchbox_region']&&$page['primary_menu']): ?><div class="primary-with-search"><?php endif; ?>
+
+
+
+<?php echo render($page['primary_menu']); ?>
+
+
+<!-- render div that will make primary menu smaller because of search -->
+<?php if ($page['searchbox_region']&&$page['primary_menu']): ?></div><?php endif; ?>
+
+
+
+    <!-- admin panel 
    <?php if ($is_admin): ?>
     <ul id="rws-uni-tabs" class="clearfix">
       <li><?php echo l(t("Administer"), "admin"); ?></li>
@@ -77,13 +91,9 @@
       <li><?php echo l(t("Modules"), "admin/modules"); ?></li>
       <li><?php echo l(t("Translation"), "admin/config/regional/language"); ?></li>
       <li><?php echo l(t("Cashe"), "admin/config/development/performance"); ?></li>
-
-
-
-
     </ul>
   <?php endif; ?>
-  <!-- / admin panel -->
+ / admin panel -->
 
 
 </div>

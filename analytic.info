@@ -7,10 +7,12 @@ core = 7.x
 engine = phptemplate
 
 stylesheets[all][] = style.css
+stylesheets[all][] = local.css
 scripts[] = jquery.js
 scripts[] = js.js
 regions[highlight] = highlight
 regions[primary_menu] = primary menu
+regions[searchbox_region] = searchbox region
 regions[left] = left sidebar
 regions[right] = right sidebar
 regions[top_content_block_right] = top content block right RED
@@ -34,11 +36,4 @@ features[] = favicon
 features[] = primary_links
 settings[] = columns
 
-
-
-; Information added by drupal.org packaging script on 2010-07-11
-version = "7.x-1.x-dev"
-core = "7.x"
-project = "analytic"
-datestamp = "1278833398"
-
+ 

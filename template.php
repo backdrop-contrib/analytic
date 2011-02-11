@@ -26,6 +26,6 @@ function analytic_process_html(&$vars) {
   if (empty($vars['page_bottom'])) {
     $vars['page_bottom'] = '';
   }
-  $vars['page_bottom'] .= '<span class="developer"><strong><a href="http://pixeljets.com" title="Go to pixeljets.com">Drupal theme</a></strong> by        <a href="http://pixeljets.com" title="Go to pixeljets.com">pixeljets.com</a> <span class="version">D7 ver.1.0</span>
+  $vars['page_bottom'] .= '<span class="developer"><strong><a href="http://pixeljets.com" title="Go to pixeljets.com">Drupal theme</a></strong> by        <a href="http://pixeljets.com" title="Go to pixeljets.com">pixeljets.com</a> <span class="version">D7 ver.1.1</span>
 </span>';
 }

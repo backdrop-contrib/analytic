@@ -1,16 +1,18 @@
-html, body.thml	{
+html	{
 background-color:#ababab; 
 	padding: 0;
 	margin: 0 auto;
 	width: 100%;
 	font-family: Georgia, "Times New Roman", Arial, Verdana, Tahoma,  sans-serif;
-	font-size: 0.8em !important;
+	font-size: 0.8em;
 	color: #181818;
 }
 
 
 body.html
 {
+margin:0;
+padding:0;
 display:block;
 text-align:center; 
 background:transparent url("images/bg_white.gif") repeat-y 50% 0;
@@ -734,9 +736,15 @@ ul.primary li a,
     _w\idth: auto; /* Reset to auto width for IE6 */
   }
 
-.region-primary-menu{
-    float: left;
-}
+
+
+.primary-with-search{float:left; width: 770px;}
+ 
+
+.searchbox-region{float:right; padding:3px 3px 0 0;}
+.searchbox-region .block, .searchbox-region .content {padding:0; border:none; margin:0;}
+
+
 
 .region-primary-menu .content, .region-primary-menu ul.menu, .region-primary-menu ul.menu li{
     padding: 0;
