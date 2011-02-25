@@ -1,5 +1,4 @@
 <?php
-// $Id$
 ?>
   <div class="<?php print $classes; ?> <?php if ($sticky&&$page == 0) { print " sticky"; } ?><?php if (!$status) { print " node-unpublished"; } ?>"<?php print $attributes; ?>>
     <?/*php if ($picture) {

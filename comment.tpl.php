@@ -1,5 +1,4 @@
 <?php
-// $Id$
 ?>
 
 <div class="<?php print $classes . ' ' . $zebra; ?> <?php if ($comment->status == COMMENT_NOT_PUBLISHED) print ' comment-unpublished'; ?>" <?php print $attributes; ?>>
