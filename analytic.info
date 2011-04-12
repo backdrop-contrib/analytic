@@ -8,8 +8,6 @@ engine = phptemplate
 
 stylesheets[all][] = style.css
 stylesheets[all][] = local.css
-scripts[] = jquery.js
-scripts[] = js.js
 regions[highlight] = highlight
 regions[primary_menu] = primary menu
 regions[searchbox_region] = searchbox region
