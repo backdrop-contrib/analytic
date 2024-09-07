@@ -1,4 +1,11 @@
 <?php
+/**
+ * @file
+ */
+
+/**
+ * Implementation of hook_menu_local_task().
+ */
 function analytic_menu_local_task($variables) {
   $link = $variables['element']['#link'];
   $link_text = $link['title'];
@@ -22,10 +29,20 @@ function analytic_menu_local_task($variables) {
 }
 
 
-function analytic_process_html(&$vars) {  
-  if (empty($vars['page_bottom'])) {
-    $vars['page_bottom'] = '';
+/**
+ * Prepares variables for page template files.
+ *
+ * @see page.tpl.php
+ */
+function analytic_process_page(&$variables) {
+  if (empty($variables['page_bottom'])) {
+    $variables['page_bottom'] = '';
   }
-  $vars['page_bottom'] .= '<span class="developer"><strong><a href="http://pixeljets.com" title="Go to pixeljets.com">Drupal theme</a></strong> by        <a href="http://pixeljets.com" title="Go to pixeljets.com">pixeljets.com</a> <span class="version">D7 ver.1.1</span>
-</span>';
+
+  $link_attributes = array('title' => 'Go to pixeljets.com');
+  $link = l(t('pixeljets.com'), 'http://pixeljets.com', $link_attributes);
+  $copy = t('Theme designed by !agency', array('!agency' => $link))
+  $variables['page_bottom'] .= '<span class="developer">';
+  $variables['page_bottom'] .= '  <strong>' . $copy . '</strong>';
+  $variables['page_bottom'] .= '</span>';
 }
