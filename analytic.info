@@ -3,6 +3,8 @@ description = Theme for communities, blogs, and online media. Created by <a href
 
 backdrop = 1.x
 
+base theme = d7compatible
+
 stylesheets[all][] = style.css
 stylesheets[all][] = local.css
  
