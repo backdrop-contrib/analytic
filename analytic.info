@@ -5,6 +5,6 @@ backdrop = 1.x
 
 base theme = d7compatible
 
-stylesheets[all][] = style.css
-stylesheets[all][] = local.css
+stylesheets[all][] = css/style.css
+stylesheets[all][] = csss/local.css
  

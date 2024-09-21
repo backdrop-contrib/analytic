@@ -25,6 +25,15 @@ function analytic_preprocess_page(&$variables) {
 }
 
 /**
+ * Prepare variables for layout templates.
+ *
+ * @see layout.tpl.php
+ */
+function analytic_preprocess_layout(&$variables) {
+  $variables['classes'][] = 'make-it-center';
+}
+
+/**
  * Prepare variables for node templates.
  *
  * @see node.tpl.php
@@ -65,6 +74,11 @@ function analytic_preprocess_comment(&$variables) {
 function analytic_preprocess_block(&$variables) {
   // Classes is already a string here. Add block-[module] from D7.
   $variables['classes'] .= ' block-' . $variables['block']->module;
+
+  // @todo Add menu region classes directly to menu block?
+  if ($variables['block']->delta == 'main-menu') {
+    //$variables['classes'] .= ' rws-primary-menu clearfix' ;
+  }
 }
 
 /**
