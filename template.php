@@ -43,6 +43,21 @@ function analytic_preprocess_node(&$variables) {
 }
 
 /**
+ * Prepare variables for comment templates.
+ *
+ * @see comment.tpl.php
+ */
+function analytic_preprocess_comment(&$variables) {
+  // Classes is already a string here. Add back classes from D7.
+
+  $variables['classes'] .= ' ' . $variables['zebra'];
+
+  if ($variables['comment']->status == COMMENT_NOT_PUBLISHED) {
+    $variables['classes'] .= ' comment-unpublished';
+  }
+}
+
+/**
  * Prepare variables for block templates.
  *
  * @see block.tpl.php
