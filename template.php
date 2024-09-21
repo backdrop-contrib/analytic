@@ -9,6 +9,7 @@
  * @see page.tpl.php
  */
 function analytic_preprocess_page(&$variables) {
+  /*
   //dpm('hello');
   if (empty($variables['page_bottom'])) {
     $variables['page_bottom'] = '';
@@ -20,14 +21,34 @@ function analytic_preprocess_page(&$variables) {
   $variables['page_bottom'] .= '<span class="developer">';
   $variables['page_bottom'] .= '  <strong>' . $copy . '</strong>';
   $variables['page_bottom'] .= '</span>';
+  */
 }
+
+/**
+ * Prepare variables for node templates.
+ *
+ * @see node.tpl.php
+ */
+function analytic_preprocess_node(&$variables) {
+  // Classes is already a string here. Add back classes from D7.
+  if ($variables['sticky'] && $variables['page'] == 0) {
+    $variables['classes'] .= ' sticky';
+  }
+  if (!$variables['status']) {
+    $variables['classes'] .= ' node-unpublished';
+  }
+
+  // Render links early so we can check if they are empty.
+  $variables['links'] = render($variables['content']['links']);
+}
+
 /**
  * Prepare variables for block templates.
  *
  * @see block.tpl.php
  */
 function analytic_preprocess_block(&$variables) {
-  // Classes is already a string here, so add block-[module].
+  // Classes is already a string here. Add block-[module] from D7.
   $variables['classes'] .= ' block-' . $variables['block']->module;
 }
 
