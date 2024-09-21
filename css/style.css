@@ -15,7 +15,7 @@ margin:0;
 padding:0;
 display:block;
 text-align:center; 
-background:transparent url("images/bg_white.gif") repeat-y 50% 0;
+background:transparent url("../images/bg_white.gif") repeat-y 50% 0;
 }
 
 
@@ -139,7 +139,7 @@ table td{padding:2px 5px; border: 1px solid #ccc;}
 
 
 #logo-container{border-top:1px solid #000; padding-top:3px; margin-bottom:3px; }
-#money-bg{background:transparent url("images/header-image.jpg") repeat right top;}
+#money-bg{background:transparent url("../images/header-image.jpg") repeat right top;}
 
 #logo-picture img{display:block;}
 #logo-picture{float:left; padding-right:15px; }
@@ -280,7 +280,7 @@ margin-bottom:15px;
 /******** COLUMN 2 NODES *********************************************************/
 .sticky{
 border:1px solid #c0c0c0;
-background:#fff url("images/featured.gif") no-repeat 18px 0 !important;
+background:#fff url("../images/featured.gif") no-repeat 18px 0 !important;
 padding-top:35px !important ;
 }
 
@@ -291,7 +291,7 @@ padding-top:35px !important ;
 /*************** NODE ***********************************/
 .node{padding:17px 18px;
 margin-bottom:5px; 
-background:transparent url("images/bg_node.gif") repeat-x bottom left;
+background:transparent url("../images/bg_node.gif") repeat-x bottom left;
 }
 
 .links{text-align:right; font-size:0.9em;}
@@ -393,7 +393,7 @@ padding-top:10px;
 #footer{
 text-align:left;
 clear:both;
-background:transparent url("images/bg_node.gif") repeat-x top left;
+background:transparent url("../images/bg_node.gif") repeat-x top left;
 font-size:0.84em;
 padding:15px 16px;
 color:#707070;
@@ -493,9 +493,9 @@ blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; fo
 }
 
 
-.taxonomy{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; border:1px dashed #fff; margin-top:5px;} 
+.taxonomy{background:#e7e7d6 url("../images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; border:1px dashed #fff; margin-top:5px;}
 
-.field-name-field-tags{background:#e7e7d6 url("images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; border:1px dashed #fff; margin-top:5px;font-size: 0.9em;}
+.field-name-field-tags{background:#e7e7d6 url("../images/bg_taxonomy.gif") no-repeat top left; padding:0.3em 0.6em; border:1px dashed #fff; margin-top:5px;font-size: 0.9em;}
 
 #edit-field-tags{
     background: none transparent; border: none; padding: 0; margin: 0;
@@ -507,7 +507,7 @@ blockquote{border:1px solid #ebebeb; background-color:#fcfcfa; color:#717171; fo
 }
 
 .developer{color:#707070; color:#9a9a9a; clear:both; display:block; margin-top:4px; font-size:0.8em; padding: 0.3em 0 0.5em 0;}
-.developer a{color:#707070; color:#9a9a9a;  font-weight:normal; background:transparent url("images/star.gif") no-repeat center left; padding-left:15px;}
+.developer a{color:#707070; color:#9a9a9a;  font-weight:normal; background:transparent url("../images/star.gif") no-repeat center left; padding-left:15px;}
 .developer strong a{text-decoration:none; background: none; padding-left:0;}
 
 .version{color:#f5f5f1; padding-left:20px;}
@@ -600,7 +600,7 @@ background-position:top left;
     list-style: none;
     white-space: nowrap;
     line-height: normal;
-    background: url(images/tab-bar.png) repeat-x left bottom;
+    background: url(../images/tab-bar.png) repeat-x left bottom;
   }
 
   ul.primary li
@@ -621,7 +621,7 @@ background-position:top left;
     text-decoration: none;
     color: #777;
     background-color: transparent;
-    background: url(images/tab-left-new.gif) no-repeat 0 -38px;
+    background: url(../images/tab-left-new.gif) no-repeat 0 -38px;
   }
 
   ul.primary li a .tab
@@ -632,7 +632,7 @@ background-position:top left;
     padding: 4px 13px 0 6px;
     border-width: 0;
     line-height: 20px;
-    background: url(images/tab-right-new.gif) no-repeat 100% -38px;
+    background: url(../images/tab-right-new.gif) no-repeat 100% -38px;
     cursor: pointer;
   }
 
@@ -640,12 +640,12 @@ background-position:top left;
   {
     border-width: 0;
     background-color: transparent;
-    background: url(images/tab-left-new.gif) no-repeat 0 -76px;
+    background: url(../images/tab-left-new.gif) no-repeat 0 -76px;
   }
 
   ul.primary li a:hover .tab
   {
-    background: url(images/tab-right-new.gif) no-repeat 100% -76px;
+    background: url(../images/tab-right-new.gif) no-repeat 100% -76px;
   }
 
   ul.primary li.active a,
@@ -654,13 +654,13 @@ background-position:top left;
     border-width: 0;
     color: #000;
     background-color: transparent;
-    background: url(images/tab-left-new.gif) no-repeat 0 0;
+    background: url(../images/tab-left-new.gif) no-repeat 0 0;
   }
 
   ul.primary li.active a .tab,
   ul.primary li.active a:hover .tab
   {
-    background: url(images/tab-right-new.gif) no-repeat 100% 0;
+    background: url(../images/tab-right-new.gif) no-repeat 100% 0;
   }
 
   ul.secondary
@@ -671,7 +671,7 @@ background-position:top left;
     border-bottom: 1px solid #c0c0c0;
     list-style: none;
     white-space: nowrap;
-    background: url(images/tab-secondary-bg.png) repeat-x left bottom;
+    background: url(../images/tab-secondary-bg.png) repeat-x left bottom;
   }
 
   ul.secondary li
@@ -691,7 +691,7 @@ background-position:top left;
     border: 1px solid #c0c0c0;
     text-decoration: none;
     color: #777;
-    background: url(images/tab-secondary.png) repeat-x 0 -56px;
+    background: url(../images/tab-secondary.png) repeat-x 0 -56px;
   }
 
   ul.secondary a .tab
@@ -705,7 +705,7 @@ background-position:top left;
 
   ul.secondary a:hover
   {
-    background: url(images/tab-secondary.png) repeat-x left bottom;
+    background: url(../images/tab-secondary.png) repeat-x left bottom;
   }
 
   ul.secondary a.active,
@@ -713,7 +713,7 @@ background-position:top left;
   {
     border: 1px solid #c0c0c0;
     color: #000;
-    background: url(images/tab-secondary.png) repeat-x left top;
+    background: url(../images/tab-secondary.png) repeat-x left top;
   }
 
 
