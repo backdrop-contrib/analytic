@@ -390,7 +390,7 @@ padding-top:10px;
 
 
 /****** FOOTER *************************************************/
-#footer{
+.l-footer{
 text-align:left;
 clear:both;
 background:transparent url("../images/bg_node.gif") repeat-x top left;
@@ -399,20 +399,20 @@ padding:15px 16px;
 color:#707070;
 }
 
-#footer h2{display:none;}
+.l-footer h2{display:none;}
 
-#footer .block-menu ul, #footer1 .block-menu ul.menu{margin:0; padding:0; font-family: "Times New Roman", Georgia, Arial,  Verdana, sans-serif; }
-#footer .block-menu li, #footer .block-menu li.leaf{margin:0; list-style:none;
+.l-footer .block-menu ul, .l-footer1 .block-menu ul.menu{margin:0; padding:0; font-family: "Times New Roman", Georgia, Arial,  Verdana, sans-serif; }
+.l-footer .block-menu li, .l-footer .block-menu li.leaf{margin:0; list-style:none;
 font-size:1.1em;
 float:left; 
 }
 
 
-#footer .block-menu ul a{display:block; padding: 10px 20px 10px 0;}
+.l-footer .block-menu ul a{display:block; padding: 10px 20px 10px 0;}
 
-#footer .block{clear:both; margin-bottom:10px;}
-#footer .block .content {padding:0; }
-#footer p{padding: 0 0 5px 0;}
+.l-footer .block{clear:both; margin-bottom:10px;}
+.l-footer .block .content {padding:0; }
+.l-footer p{padding: 0 0 5px 0;}
 
 
 
