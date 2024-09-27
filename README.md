@@ -13,12 +13,28 @@ Installation <!-- This section is required. -->
 - Visit the configuration page under Administration > Appearence > Settings >
   Analytic (admin/appearance/settings/analytic).
 
+- Visit the "Layouts" section at Administration > Structure > Layouts >
+  Default or (admin/structure/layouts/manage/default)
+
+  Recommended Block Placements:
+  - Move Breadcrumb to "Content" region
+  - Move Page title combo to "Content" region
+  - Move Primary Navigation to "Top" region
+  - Add "Search" to "Top" Region
+
+  Layout templates have been modified from core as follows:
+  - .l-top region moved just below .l-header.
+  - .l-messages region moved just below l-top.
+  - Added .l-top-inner and row divs inside .l-top.
+  - Removed .l-header-inner from inside .l-header.
+
 
 Differences from Drupal 7 <!-- Do not include if there are no differences. -->
 -------------------------
 
 - Page laout CSS has been removed in favor of the Backdrop layout system.
-- More TBD
+- Base font size has been increased to 16px.
+- Max width increased from 1000pxto 1024px
 
 
 Issues <!-- This section is required. -->
