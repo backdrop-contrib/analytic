@@ -29,29 +29,37 @@
 
   <?php if ($content['header']): ?>
     <header class="l-header" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-header-inner container container-fluid">
-        <?php print $content['header']; ?>
-      </div>
+      <?php print $content['header']; ?>
     </header>
   <?php endif; ?>
 
-  <div class="l-wrapper">
-    <div class="l-wrapper-inner container container-fluid">
-
-      <?php if ($messages): ?>
-        <div class="l-messages" role="status" aria-label="<?php print t('Status messages'); ?>">
-          <?php print $messages; ?>
+  <?php if (!empty($content['top'])): ?>
+    <div class="l-top">
+      <div class="l-top-inner container container-fluid">
+        <div class="row">
+          <?php print $content['top']; ?>
         </div>
-      <?php endif; ?>
-
-      <div class="l-page-title">
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?>
-          <h1 class="page-title"><?php print $title; ?></h1>
-        <?php endif; ?>
-        <?php print render($title_suffix); ?>
       </div>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($messages): ?>
+    <div class="l-messages" role="status" aria-label="<?php print t('Status messages'); ?>">
+      <?php print $messages; ?>
+    </div>
+  <?php endif; ?>
+
+  <div class="l-wrapper">
+    <div class="l-page-title">
+      <a id="main-content"></a>
+      <?php print render($title_prefix); ?>
+      <?php if ($title): ?>
+        <h1 class="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+    </div>
+
+    <div class="l-wrapper-inner container container-fluid">
 
       <?php if ($tabs): ?>
         <nav class="tabs" role="tablist" aria-label="<?php print t('Admin content navigation tabs.'); ?>">
@@ -60,12 +68,6 @@
       <?php endif; ?>
 
       <?php print $action_links; ?>
-
-      <?php if (!empty($content['top'])): ?>
-        <div class="l-top">
-          <?php print $content['top']; ?>
-        </div>
-      <?php endif; ?>
 
       <div class="l-content" role="main" aria-label="<?php print t('Main content'); ?>">
         <?php print $content['content']; ?>
@@ -81,7 +83,7 @@
   </div><!-- /.l-wrapper -->
 
   <?php if ($content['footer']): ?>
-    <footer class="l-footer">
+    <footer class="l-footer" id="footer">
       <div class="l-footer-inner container container-fluid">
         <?php print $content['footer']; ?>
       </div><!-- /.container -->

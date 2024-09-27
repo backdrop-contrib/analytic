@@ -21,6 +21,9 @@
  *   - $content['sidebar']
  *   - $content['bottom']
  *   - $content['footer']
+ *
+ * Differences from core:
+ *  .l-top also has 'row' class
  */
 ?>
 <div class="layout--moscone <?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
@@ -30,20 +33,28 @@
 
   <?php if ($content['header']): ?>
     <header class="l-header" role="banner" aria-label="<?php print t('Site header'); ?>">
-      <div class="l-header-inner container container-fluid">
-        <?php print $content['header']; ?>
-      </div>
+      <?php print $content['header']; ?>
     </header>
+  <?php endif; ?>
+
+  <?php if (!empty($content['top'])): ?>
+    <div class="l-top">
+      <div class="l-top-inner container container-fluid">
+        <div class="row">
+          <?php print $content['top']; ?>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($messages): ?>
+    <div class="l-messages" role="status" aria-label="<?php print t('Status messages'); ?>">
+      <?php print $messages; ?>
+    </div>
   <?php endif; ?>
 
   <div class="l-wrapper">
     <div class="l-wrapper-inner container container-fluid">
-
-      <?php if ($messages): ?>
-        <div class="l-messages" role="status" aria-label="<?php print t('Status messages'); ?>">
-          <?php print $messages; ?>
-        </div>
-      <?php endif; ?>
 
       <div class="l-page-title">
         <a id="main-content"></a>
@@ -61,12 +72,6 @@
       <?php endif; ?>
 
       <?php print $action_links; ?>
-
-      <?php if (!empty($content['top'])): ?>
-        <div class="l-top">
-          <?php print $content['top']; ?>
-        </div>
-      <?php endif; ?>
 
       <div class="l-middle row">
         <main class="l-content col-md-9 col-md-push-3" role="main" aria-label="<?php print t('Main content'); ?>">

@@ -18,6 +18,9 @@
  *   - $content['top']
  *   - $content['content']
  *   - $content['footer']
+ *
+ * Differences from core:
+ *  .l-top also has 'row' class
  */
 ?>
 <div class="layout--one-column layout-legacy <?php print implode(' ', $classes); ?>"<?php print backdrop_attributes($attributes); ?>>
@@ -31,9 +34,13 @@
     </header>
   <?php endif; ?>
 
-  <?php if ($content['top']): ?>
+  <?php if (!empty($content['top'])): ?>
     <div class="l-top">
-      <?php print $content['top']; ?>
+      <div class="l-top-inner container container-fluid">
+        <div class="row">
+          <?php print $content['top']; ?>
+        </div>
+      </div>
     </div>
   <?php endif; ?>
 
@@ -48,7 +55,7 @@
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-        <h1 class="page-title">
+        <h1 class="page-title title">
           <?php print $title; ?>
         </h1>
       <?php endif; ?>
