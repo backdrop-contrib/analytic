@@ -39,10 +39,13 @@ function analytic_preprocess_layout(&$variables) {
  * @see node.tpl.php
  */
 function analytic_preprocess_node(&$variables) {
-  // Classes is already a string here. Add back classes from D7.
-  if ($variables['sticky'] && $variables['page'] == 0) {
-    $variables['classes'] .= ' sticky';
+  // Classes is already a string here.
+
+  if ($variables['sticky'] && $variables['view_mode'] == 'full') {
+    // Remove sticky if we are not looking at a full view mode.
+    $variables['classes'] = str_replace(' sticky', '', $variables['classes']);
   }
+
   if (!$variables['status']) {
     $variables['classes'] .= ' node-unpublished';
   }
@@ -75,9 +78,20 @@ function analytic_preprocess_block(&$variables) {
   // Classes is already a string here. Add block-[module] from D7.
   $variables['classes'] .= ' block-' . $variables['block']->module;
 
-  // @todo Add menu region classes directly to menu block?
-  if ($variables['block']->delta == 'main-menu') {
-    //$variables['classes'] .= ' rws-primary-menu clearfix' ;
+  // Add bootstrap grid classes to MENU block in top region only.
+  if ($variables['block']->delta == 'main-menu' ) {
+    $uuid = $variables['block']->uuid;
+    if (in_array($uuid, $variables['layout']->positions['top'])) {
+      $variables['classes'] .= ' col-md-8' ;
+    }
+  }
+
+  // Add bootstrap grid classes to SEARCH block in top region only.
+  if ($variables['block']->delta == 'form' ) {
+    $uuid = $variables['block']->uuid;
+    if (in_array($uuid, $variables['layout']->positions['top'])) {
+      $variables['classes'] .= ' col-md-4' ;
+    }
   }
 }
 
