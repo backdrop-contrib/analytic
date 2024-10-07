@@ -82,7 +82,7 @@ function analytic_preprocess_block(&$variables) {
   if ($variables['block']->delta == 'main-menu' ) {
     $uuid = $variables['block']->uuid;
     if (in_array($uuid, $variables['layout']->positions['top'])) {
-      $variables['classes'] .= ' col-md-8' ;
+      $variables['classes'] .= ' col-md-9' ;
     }
   }
 
@@ -90,7 +90,7 @@ function analytic_preprocess_block(&$variables) {
   if ($variables['block']->delta == 'form' ) {
     $uuid = $variables['block']->uuid;
     if (in_array($uuid, $variables['layout']->positions['top'])) {
-      $variables['classes'] .= ' col-md-4' ;
+      $variables['classes'] .= ' col-md-3' ;
     }
   }
 }
